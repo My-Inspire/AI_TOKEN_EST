@@ -1,0 +1,16 @@
+# Secrets — never commit real credentials (see AGENTS.md Security Policies)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+docker-compose.override.yml
+
+# Dependencies / output
+node_modules/
+coverage/
+tool-output/
