@@ -1,0 +1,11 @@
+{
+    "name": "ai-cost-monitor-v3",
+    "version": "3.0.0",
+    "description": "AI Token, Cost, Comparison & Optimization Platform — vanilla JS frontend + zero-dependency Node backend + IndiaAI GPU catalogue.",
+    "type": "module",
+    "scripts": {
+        "start": "node backend/server.js",
+        "test": "node --test tests/backend/parsers.test.mjs tests/backend/api.test.mjs tests/backend/services.test.mjs tests/backend/gpu.test.mjs tests/backend/tokenizer.test.mjs tests/backend/vendor-assets.test.mjs tests/backend/image-formats.test.mjs tests/frontend/image-detect.test.mjs tests/frontend/journey.test.mjs tests/frontend/smoke.test.mjs tests/frontend/token-analysis.test.mjs tests/frontend/gpu-select.test.mjs tests/frontend/estimate-ref.test.mjs tests/frontend/multifile.test.mjs tests/frontend/report.test.mjs tests/frontend/report-flow.test.mjs"
+    },
+    "license": "UNLICENSED"
+}
