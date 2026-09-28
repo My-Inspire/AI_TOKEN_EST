@@ -1,0 +1,159 @@
+/* =========================================================
+   AI Cost Monitor V3 — design tokens.
+   Dark mockup theme (user-approved): deep slate surfaces,
+   vibrant teal accent, restrained teal glow on the active
+   nav item / primary CTA / current step only. Light theme
+   below stays flat.
+   :root = dark (default). [data-theme="light"] = light.
+   ========================================================= */
+
+:root,
+[data-theme="dark"] {
+    color-scheme: dark;
+
+    /* Surfaces & text — deep slate (mockup: #0D1117 / #161B22) */
+    --bg: #0d1117;
+    --bg-2: #11161d;
+    --surface: #161b22;
+    --surface-2: #1b2330;
+    --text: #e8eaed;
+    --muted: #9aa3ad;
+    --faint: #6b7480;
+    --border: #232d3a;
+    --border-strong: #2e3b4d;
+
+    /* Brand — vibrant teal (mockup: #00E6A5), one accent only */
+    --primary: #00e6a5;
+    --primary-hover: #33edb5;
+    --primary-active: #00c78e;
+    --primary-soft: rgba(0, 230, 165, 0.12);
+    --primary-border: rgba(0, 230, 165, 0.4);
+    --on-primary: #052e22;
+
+    /* Secondary accent — muted slate (was copper glow) */
+    --copper: #8fa3b3;
+    --copper-soft: rgba(143, 163, 179, 0.12);
+    --copper-border: rgba(143, 163, 179, 0.4);
+    --peach: #e8eaed;
+    --peach-soft: rgba(232, 234, 237, 0.06);
+
+    /* Sidebar */
+    --side-bg: #10151c;
+    --side-text: #e8eaed;
+    --side-muted: #9aa3ad;
+
+    /* Status — flat, no glow */
+    --success: #5cb98a;
+    --success-soft: rgba(92, 185, 138, 0.1);
+    --success-border: rgba(92, 185, 138, 0.35);
+    --chart-purple: #8fa3b3;
+    --warning: #d9a45b;
+    --warning-soft: rgba(217, 164, 91, 0.1);
+    --warning-border: rgba(217, 164, 91, 0.35);
+    --danger: #e07a6d;
+    --danger-soft: rgba(224, 122, 109, 0.1);
+    --danger-border: rgba(224, 122, 109, 0.35);
+    --trend-bar: #8fa3b3;
+
+    /* Interaction */
+    --hover: rgba(255, 255, 255, 0.04);
+    --ring: rgba(0, 230, 165, 0.4);
+    /* Restrained teal glow — active nav / primary CTA / step only */
+    --glow-primary: 0 0 0 1px rgba(0, 230, 165, 0.35), 0 0 18px rgba(0, 230, 165, 0.22);
+
+    /* Subtle wash triplet for tinted rows/cells, used as
+       rgba(var(--wash), <alpha>). Neutral slate so washes stay
+       clean on the deep background. */
+    --wash: 148, 163, 184;
+
+    /* Elevation — subtle flat shadows only */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.35);
+
+    /* Motion */
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --t-fast: 130ms var(--ease-out);
+    --t-base: 190ms var(--ease-out);
+
+    /* Geometry */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-pill: 999px;
+
+    /* Layout */
+    --side-w: 15.5rem;
+    --side-w-collapsed: 4.25rem;
+    --page-max: 72rem;
+}
+
+[data-theme="light"] {
+    color-scheme: light;
+
+    --bg: #f4f5f6;
+    --bg-2: #eceeef;
+    --surface: #ffffff;
+    --surface-2: #eceeef;
+    --text: #1c2127;
+    --muted: #5b6570;
+    --faint: #8a94a0;
+    --border: #dde1e5;
+    --border-strong: #b9c1c9;
+
+    --primary: #0f766e;
+    --primary-hover: #0d5f59;
+    --primary-active: #0a4c47;
+    --primary-soft: rgba(15, 118, 110, 0.08);
+    --primary-border: rgba(15, 118, 110, 0.3);
+    --on-primary: #FFFFFF;
+
+    --copper: #5b6570;
+    --copper-soft: rgba(91, 101, 112, 0.08);
+    --copper-border: rgba(91, 101, 112, 0.3);
+    --peach: #0f766e;
+    --peach-soft: rgba(15, 118, 110, 0.08);
+
+    /* Grey sidebar in light mode (dark theme keeps its dark sidebar) */
+    --side-bg: #e3e7eb;
+    --side-text: #1c2127;
+    --side-muted: #5b6570;
+
+    --success: #1a6b4f;
+    --success-soft: rgba(26, 107, 79, 0.08);
+    --success-border: rgba(26, 107, 79, 0.3);
+    --chart-purple: #5b6570;
+    --warning: #8a5a1e;
+    --warning-soft: rgba(138, 90, 30, 0.08);
+    --warning-border: rgba(138, 90, 30, 0.3);
+    --danger: #a02c20;
+    --danger-soft: rgba(160, 44, 32, 0.06);
+    --danger-border: rgba(160, 44, 32, 0.28);
+    --trend-bar: #0f766e;
+
+    --hover: rgba(28, 33, 39, 0.04);
+    --ring: rgba(15, 118, 110, 0.3);
+    /* No neon glow in light mode — flat accents only */
+    --glow-primary: none;
+
+    /* Neutral slate wash (see note above) — no warm tint on white. */
+    --wash: 28, 33, 39;
+
+    --shadow-sm: 0 1px 2px rgba(28, 33, 39, 0.08);
+    --shadow-md: 0 2px 8px rgba(28, 33, 39, 0.08);
+    --shadow-lg: 0 4px 16px rgba(28, 33, 39, 0.1);
+}
+
+/* Font-size accessibility: everything rem-based. */
+html { font-size: 100%; }
+html[data-font-size="small"] { font-size: 93.75%; }
+html[data-font-size="large"] { font-size: 112.5%; }
+
+/* Motion preference hook (Settings can force reduce). */
+html[data-motion="reduce"] *,
+html[data-motion="reduce"] *::before,
+html[data-motion="reduce"] *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+}

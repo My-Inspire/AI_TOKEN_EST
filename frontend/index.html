@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-font-size="medium">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="AI Token, Cost, Comparison & Optimization Platform — token estimation, model pricing, scenario analysis, GPU infrastructure modelling.">
+
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <title>Dashboard — AI Cost Monitor</title>
+
+    <link rel="stylesheet" href="styles/tokens.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/animations.css">
+
+    <!-- Stored preferences before first paint (no theme flash) -->
+    <script>
+        (function () {
+            try {
+                var theme = sessionStorage.getItem("aicost.theme");
+                if (theme) document.documentElement.dataset.theme = theme;
+                var fontSize = sessionStorage.getItem("aicost.fontSize");
+                if (fontSize) document.documentElement.dataset.fontSize = fontSize;
+                if (sessionStorage.getItem("aicost.motion") === "reduce") {
+                    document.documentElement.dataset.motion = "reduce";
+                }
+            } catch (error) { /* storage unavailable — defaults apply */ }
+        })();
+    </script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#view">Skip to content</a>
+
+<div class="shell">
+
+    <aside class="sidebar" id="sidebar" aria-label="Application sidebar"></aside>
+    <div class="scrim" aria-hidden="true"></div>
+
+    <div class="main-column">
+        <header class="topbar" id="topbar"></header>
+
+        <main class="page" id="view" aria-label="Main content">
+            <div class="view-head">
+                <h2>Starting…</h2>
+            </div>
+            <div class="panel">
+                <p>If this message persists, open the app over HTTP — ES modules are blocked on file://. Run <kbd>node backend/server.js</kbd> from the project folder and open http://127.0.0.1:3000.</p>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <span>AI Cost Monitor · V3</span>
+            <span id="rateNote">Local calculations · Verified official pricing (USD/1M) · billed in ₹ @ 94.50/USD</span>
+        </footer>
+    </div>
+
+</div>
+
+<div id="toasts" role="status" aria-live="polite"></div>
+
+<script type="module" src="app/main.js"></script>
+
+</body>
+</html>
